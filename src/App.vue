@@ -1,17 +1,65 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <AvailabilitiesComponent v-bind:availabilities="times"></AvailabilitiesComponent>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import AvailabilitiesComponent from './components/AvailabilitiesComponent.vue'
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    AvailabilitiesComponent
+  },
+  data() {
+    return {
+      times:
+      [{
+        startTime: '12:00T00',
+        endTime: '13:00T00',
+        id:1
+      },
+      {
+        startTime: '13:00T00',
+        endTime: '14:00T00',
+        id:2
+      },
+      {
+        startTime: '14:00T00',
+        endTime: '15:00T00',
+        id:3
+      },
+      {
+        startTime: '15:00T00',
+        endTime: '13:00T00',
+        id:4
+      },
+      {
+        startTime: '16:00T00',
+        endTime: '14:00T00',
+        id:5
+      },
+      {
+        startTime: '17:00T00',
+        endTime: '15:00T00',
+        id:6
+      },
+      {
+        startTime: '18:00T00',
+        endTime: '13:00T00',
+        id:7
+      },
+      {
+        startTime: '19:00T00',
+        endTime: '14:00T00',
+        id:8
+      },
+      {
+        startTime: '20:00T00',
+        endTime: '15:00T00',
+        id:9
+      }],
+    }
   }
 }
 </script>
